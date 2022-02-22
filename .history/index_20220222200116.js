@@ -3,7 +3,7 @@ const hoursEl = document.getElementById('hours');
 const minsEl = document.getElementById('mins');
 const secondsEl = document.getElementById('seconds');
 
-const newYears = '25 feb 2022';
+const newYears = '20 feb 2022';
 
 function countdown() {
 	const newYearsDate = new Date(newYears);
@@ -17,13 +17,9 @@ function countdown() {
 	const seconds = Math.floor(totalSeconds) % 60;
 
 	daysEl.innerHTML = days;
-	hoursEl.innerHTML = formatTime(hours);
-	minsEl.innerHTML = formatTime(mins);
-	secondsEl.innerHTML = formatTime(seconds);
-}
-
-function formatTime(time) {
-	return time < 10 ? `0${time}` : time;
+	hoursEl.innerHTML = hours;
+	minsEl.innerHTML = mins;
+	secondsEl.innerHTML = seconds;
 }
 
 countdown();
